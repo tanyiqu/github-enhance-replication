@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         GitHub 增强Https复制
 // @namespace    http://tampermonkey.net/
-// @version      1.0
+// @version      1.1
 // @description  增强GitHub的复制HTTPS链接，附带加速链接
 // @author       tanyiqu
 // @match        *://github.com/*
@@ -59,9 +59,18 @@
         html += $(input_group).prop("outerHTML");
         // 获取原链接地址
         let url = input_group.find('input').val();
+        // https://github.com/xxx/yyyy.git
+
+        // 截取后面的仓库名
+        let repository_name = url.replace(/http.*?github.com/,'');
 
         // 添加带有 “git clone” 的div
         html += generateHtml('git clone ' + url);
+
+        // 添加加速链接
+        html += generateHtml('git clone https://hub.fastgit.org' + repository_name);
+        html += generateHtml('git clone https://gitclone.com/github.com' + repository_name);
+        html += generateHtml('git clone https://github.com.cnpmjs.org' + repository_name);
 
         // 链接下面的一行提示
         html += `<p class="mt-2 mb-0 f6 text-gray">Use Git or checkout with SVN using the web URL.</p>`;
