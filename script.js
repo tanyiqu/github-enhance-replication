@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         GitHub 增强Https复制
 // @namespace    http://tampermonkey.net/
-// @version      1.1
+// @version      1.2
 // @description  增强GitHub的复制HTTPS链接，附带加速链接
 // @author       tanyiqu
 // @match        *://github.com/*
