@@ -17,9 +17,9 @@ GitHub增强复制
 
 ### 更新日志
 
-#### 当前版本：1.1 2021-1-4
+#### 当前版本：1.2 2021-4-7
 
-- 添加加速的链接
+- 修复不能正常显示的问题
 
 [历史更新日志](https://github.com/tanyiqu/github-enhance-replication/blob/main/update.md)
 

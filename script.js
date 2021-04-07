@@ -18,6 +18,8 @@
      * @param {String} value value
      */
     const generateHtml = (value) => {
+
+        // v1.0 - v1.2
         return `
         <div class="input-group"
             style="margin-top:8px">
@@ -49,7 +51,7 @@
         let html = '';
 
         // 获取第一个div
-        let div = $("[role='tabpanel']").get(0);
+        let div = $("[role='tabpanel']").get(2);
         if (!div) {
             return;
         }
